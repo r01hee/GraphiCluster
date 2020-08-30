@@ -1,0 +1,29 @@
+{
+    "name": "GraphiCluster.ClusterCreaterKit",
+    "references": [
+        "ClusterVR.CreatorKit",
+        "ClusterVR.CreatorKit.World",
+        "ClusterVR.CreatorKit.World.Implements",
+        "ClusterVR.CreatorKit.Item",
+        "ClusterVR.CreatorKit.Item.Implements",
+        "ClusterVR.CreatorKit.Extensions",
+        "ClusterVR.CreatorKit.Constants",
+        "ClusterVR.CreatorKit.Gimmick",
+        "ClusterVR.CreatorKit.Gimmick.Implements",
+        "ClusterVR.CreatorKit.Trigger",
+        "ClusterVR.CreatorKit.Trigger.Implements",
+        "ClusterVR.CreatorKit.Operation",
+        "ClusterVR.CreatorKit.Operation.Implements"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

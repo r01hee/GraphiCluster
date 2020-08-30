@@ -1,0 +1,14 @@
+﻿Button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(120, 120, 120);
+  background-image: resource("GameObject Icon") 
+}
+
+Button:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+Button:hover:active {
+  background-color: rgb(80, 80, 80);
+}
