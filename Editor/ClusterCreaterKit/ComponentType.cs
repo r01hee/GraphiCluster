@@ -170,6 +170,7 @@ namespace GraphiCluster.ClusterCreaterKit
                     typeof(OnGrabItemTrigger),
                     typeof(OnReleaseItemTrigger),
                     typeof(UseItemTrigger),
+                    typeof(OnJoinPlayerTrigger),
                 }
             },
             {

@@ -1,11 +1,11 @@
 {
     "name": "dev.r01.graphicluster",
     "displayName": "GraphiCluster",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "unity": "2019.4",
     "description": "cluster-creator-kit's messaging into the graph",
     "dependencies":
     {
-        "mu.cluster.cluster-creator-kit": "1.6.3"
+        "mu.cluster.cluster-creator-kit": "1.7.0"
     }
 }
