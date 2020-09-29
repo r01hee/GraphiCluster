@@ -154,6 +154,22 @@ namespace GraphiCluster.ClusterCreaterKit
                     ParameterType.Signal
                 }
             },
+            {
+                typeof(SetFillAmountGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Integer,
+                    ParameterType.Float
+                }
+            },
+            {
+                typeof(SetSliderValueGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Integer,
+                    ParameterType.Float
+                }
+            },
         };
 
         private static readonly ParameterType[] TypeOfGimmickToParameterTypesDefault = { ParameterType.Signal };
@@ -171,6 +187,7 @@ namespace GraphiCluster.ClusterCreaterKit
                     typeof(OnReleaseItemTrigger),
                     typeof(UseItemTrigger),
                     typeof(OnJoinPlayerTrigger),
+                    typeof(OnReceiveOwnershipItemTrigger),
                 }
             },
             {
