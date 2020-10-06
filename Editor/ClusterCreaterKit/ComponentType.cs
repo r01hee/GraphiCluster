@@ -170,7 +170,17 @@ namespace GraphiCluster.ClusterCreaterKit
                     ParameterType.Float
                 }
             },
-        };
+			{
+				typeof(SetMoveSpeedRatePlayerGimmick),
+				new ParameterType[]
+				{
+					ParameterType.Signal,
+					ParameterType.Bool,
+					ParameterType.Float,
+					ParameterType.Integer
+				}
+			},
+		};
 
         private static readonly ParameterType[] TypeOfGimmickToParameterTypesDefault = { ParameterType.Signal };
 

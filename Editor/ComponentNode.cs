@@ -26,7 +26,7 @@ namespace GraphiCluster
 
         #region Public Properies
 
-        public MessagePort[] InputPorts { get; set; }  = MessagePortsEmpty;
+        public MessagePort[] InputPorts { get; set; } = MessagePortsEmpty;
 
         public MessagePort[] OutputPorts { get; set; } = MessagePortsEmpty;
 
@@ -143,16 +143,25 @@ namespace GraphiCluster
 
         private GimmickKey FindGimmick(FieldInfo[] fieldInfos)
         {
-            var keyFieldInfo = fieldInfos.FirstOrDefault(x => x.FieldType == typeof(GimmickKey));
-
-            var ret = keyFieldInfo?.GetValue(this.Origin) as GimmickKey;
-            if (ret != null)
+            var key = GetOriginField<GimmickKey>(fieldInfos);
+            if (key != null)
             {
-                return ret;
+                return key;
             }
 
-            var globalKeyFieldInfo = fieldInfos.FirstOrDefault(x => x.FieldType == typeof(GlobalGimmickKey));
-            return (globalKeyFieldInfo?.GetValue(this.Origin) as GlobalGimmickKey)?.Key;
+            var globalKey = GetOriginField<GlobalGimmickKey>(fieldInfos);
+            if (globalKey != null)
+            {
+                return globalKey.Key;
+            }
+
+            var playerKey = GetOriginField<PlayerGimmickKey>(fieldInfos);
+            if (playerKey != null)
+            {
+                return playerKey.Key;
+            }
+
+            return null;
         }
 
         private Trigger[][] FindTriggerSets(FieldInfo[] fieldInfos)
@@ -171,12 +180,7 @@ namespace GraphiCluster
             return res.Any() ? res : null;
         }
 
-        private Logic FindLogic(FieldInfo[] fieldInfos)
-        {
-            var logicFieldInfo = fieldInfos.FirstOrDefault(x => x.FieldType == typeof(Logic));
-
-            return (Logic)logicFieldInfo?.GetValue(this.Origin);
-        }
+        private Logic FindLogic(FieldInfo[] fieldInfos) => GetOriginField<Logic>(fieldInfos);
 
         private LotteryChoice[] FindLotteryChoices(FieldInfo[] fieldInfos)
         {
@@ -214,6 +218,9 @@ namespace GraphiCluster
 
             return res.Any() ? res : null;
         }
+
+        private T GetOriginField<T>(IEnumerable<FieldInfo> fieldInfos) where T : class
+            => fieldInfos.FirstOrDefault(x => x.FieldType == typeof(T))?.GetValue(this.Origin) as T;
 
         #endregion
     }
