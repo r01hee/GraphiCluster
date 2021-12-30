@@ -251,14 +251,21 @@ namespace GraphiCluster.ClusterCreaterKit
                 ComponentType.Trigger,
                 new Type[]
                 {
+                    typeof(InitializePlayerTrigger),
                     typeof(InteractItemTrigger),
+                    typeof(IsGroundedCharacterItemTrigger),
+                    typeof(OnAngularVelocityChangedItemTrigger),
                     typeof(OnCollideItemTrigger),
                     typeof(OnCreateItemTrigger),
+                    typeof(OnGetOffItemTrigger),
+                    typeof(OnGetOnItemTrigger),
                     typeof(OnGrabItemTrigger),
-                    typeof(OnReleaseItemTrigger),
-                    typeof(UseItemTrigger),
                     typeof(OnJoinPlayerTrigger),
                     typeof(OnReceiveOwnershipItemTrigger),
+                    typeof(OnReleaseItemTrigger),
+                    typeof(OnVelocityChangedItemTrigger),
+                    typeof(SteerItemTrigger),
+                    typeof(UseItemTrigger),
                 }
             },
             {
