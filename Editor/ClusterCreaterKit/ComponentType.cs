@@ -71,6 +71,20 @@ namespace GraphiCluster.ClusterCreaterKit
                 }
             },
             {
+                typeof(GetOffItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Signal
+				}
+			},
+            {
+                typeof(JumpCharacterItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Signal
+				}
+			},
+            {
                 typeof(PlayAudioSourceGimmick),
                 new ParameterType[]
                 {
@@ -93,10 +107,19 @@ namespace GraphiCluster.ClusterCreaterKit
                 }
             },
             {
+                typeof(SetAngularVelocityCharacterItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Float,
+                    ParameterType.Integer
+                }
+            },
+            {
                 typeof(SetAngularVelocityItemGimmick),
                 new ParameterType[]
                 {
-                    ParameterType.Signal
+                    ParameterType.Signal,
+                    ParameterType.Vector3
                 }
             },
             {
@@ -110,10 +133,40 @@ namespace GraphiCluster.ClusterCreaterKit
 				}
 			},
             {
+                typeof(SetFillAmountGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Float,
+                    ParameterType.Integer
+                }
+            },
+            {
                 typeof(SetGameObjectActiveGimmick),
                 new ParameterType[]
                 {
                     ParameterType.Bool
+                }
+            },
+            {
+                typeof(SetJumpHeightRatePlayerGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Float
+                }
+            },
+            {
+                typeof(SetMoveSpeedRatePlayerGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Float
+                }
+            },
+            {
+                typeof(SetSliderValueGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Float,
+                    ParameterType.Integer
                 }
             },
             {
@@ -127,10 +180,44 @@ namespace GraphiCluster.ClusterCreaterKit
                 }
             },
             {
+                typeof(SetVelocityCharacterItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Vector2
+                }
+            },
+            {
                 typeof(SetVelocityItemGimmick),
                 new ParameterType[]
                 {
                     ParameterType.Signal
+                }
+            },
+            {
+                typeof(SetWheelColliderBrakeTorqueItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Bool,
+                    ParameterType.Float,
+                    ParameterType.Integer,
+                }
+            },
+            {
+                typeof(SetWheelColliderMotorTorqueItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Bool,
+                    ParameterType.Float,
+                    ParameterType.Integer,
+                }
+            },
+            {
+                typeof(SetWheelColliderSteerAngleItemGimmick),
+                new ParameterType[]
+                {
+                    ParameterType.Bool,
+                    ParameterType.Float,
+                    ParameterType.Integer,
                 }
             },
             {
@@ -154,32 +241,6 @@ namespace GraphiCluster.ClusterCreaterKit
                     ParameterType.Signal
                 }
             },
-            {
-                typeof(SetFillAmountGimmick),
-                new ParameterType[]
-                {
-                    ParameterType.Integer,
-                    ParameterType.Float
-                }
-            },
-            {
-                typeof(SetSliderValueGimmick),
-                new ParameterType[]
-                {
-                    ParameterType.Integer,
-                    ParameterType.Float
-                }
-            },
-			{
-				typeof(SetMoveSpeedRatePlayerGimmick),
-				new ParameterType[]
-				{
-					ParameterType.Signal,
-					ParameterType.Bool,
-					ParameterType.Float,
-					ParameterType.Integer
-				}
-			},
 		};
 
         private static readonly ParameterType[] TypeOfGimmickToParameterTypesDefault = { ParameterType.Signal };
