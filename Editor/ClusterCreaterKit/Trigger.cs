@@ -4,16 +4,16 @@ namespace GraphiCluster.ClusterCreaterKit
 {
     public class Trigger
     {
-        public TriggerParam Param { get; }
+        public ConstantTriggerParam Param { get; }
 
         public string Name { get; }
 
-        public Trigger(TriggerParam triggerParam, string name)
+        public Trigger(ConstantTriggerParam triggerParam, string name)
         {
             Param = triggerParam;
             Name = name;
         }
 
-        public Trigger(TriggerParam triggerParam) : this(triggerParam, "") { }
+        public Trigger(ConstantTriggerParam triggerParam) : this(triggerParam, "") { }
     }
 }

@@ -6,6 +6,6 @@ namespace GraphiCluster.ClusterCreaterKit
     {
         public float Weight { get; set; }
 
-        public TriggerParam[] Triggers { get; set; }
+        public ConstantTriggerParam[] Triggers { get; set; }
     }
 }

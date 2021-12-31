@@ -9,7 +9,7 @@ using UnityEngine;
 using ClusterVR.CreatorKit.Gimmick.Implements;
 using ClusterVR.CreatorKit.Operation;
 
-using TriggerParam = ClusterVR.CreatorKit.Trigger.Implements.TriggerParam;
+using TriggerParam = ClusterVR.CreatorKit.Trigger.Implements.ConstantTriggerParam;
 
 using GraphiCluster.ClusterCreaterKit;
 using GraphiCluster.GraphElements;

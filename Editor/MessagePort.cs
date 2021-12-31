@@ -51,12 +51,12 @@ namespace GraphiCluster
         }
 
         public MessagePort(Trigger trigger)
-            : this(trigger.Param.Key, Orientation.Horizontal, Direction.Output, Capacity.Multi,trigger.Param.Type)
+            : this(trigger.Param.Key, Orientation.Horizontal, Direction.Output, Capacity.Multi, trigger.Param.Type)
         {
             TriggerTarget = trigger.Param.Target;
             if (TriggerTarget == TriggerTarget.SpecifiedItem)
             {
-                SpecifiedTargetItem = trigger.Param.SpecifiedTargetItem;
+                SpecifiedTargetItem = trigger.Param.Convert().SpecifiedTargetItem;
             }
             IsInput = false;
         }
